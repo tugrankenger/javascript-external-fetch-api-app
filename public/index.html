@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Search</title>
+    <link rel="stylesheet" href="../src/assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="meal-wrapper">
+            <div class="meal-search">
+                <h2 class="title">Food Search</h2>
+                <blockquote>
+                    Stay away from sugar.
+                    <cite>(Tuğran Kenger)</cite>
+                </blockquote>
+
+                <div class="meal-search-box">
+                    <input type="text" class="search-control" placeholder="Enter a food name" id="search-input">
+                    <button type="submit" class="search-btn btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="meal-result">
+                <h2 class="title">Your search result</h2>
+                <div id="meal">
+                    <div class="meal-item">
+                        <div class="meal-img">
+                            <img src="../src/food.jpg" alt="food">
+                        </div>
+                        <div class="meal-name">
+                            <h3>Fried Potatoes</h3>
+                            <a href="javascript:void(0)" class="recipe-btn">Recipe</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="meal-details">
+                <button type="button" class="btn recipe-close-btn" id="recipe-close-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+
+                <div class="meal-details-content">
+                    <h2 class="recipe-title">Meals name here</h2>
+                    <p class="recipe-category">Category Name</p>
+
+                    <div class="recipe-instruct">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda illo praesentium labore. Libero deserunt veritatis rem impedit fugiat pariatur culpa.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi voluptate suscipit error, dicta at in.</p>
+                    </div>
+
+                    <div class="recipe-meal-img">
+                        <img src="../src/food.jpg" alt="food">
+                    </div>
+                    <div class="recipe-link">
+                        <a href="javascript:void(0)" target="_blank">Watch video</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="../src/app.js"></script>
+</body>
+</html>
