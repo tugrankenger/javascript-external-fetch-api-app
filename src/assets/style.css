@@ -8,15 +8,18 @@
     display: block !important;
 }
 
-.meal-im img{
+.meal-img img{
     width: 100%;
     display: block;
+    max-height: 300px;
+    height: 100%;
+    object-fit: cover;
 }
 
 .recipe-btn{
     text-decoration: none;
-    color: hsl(0, 0%, 100%);
-    background: hsl(0, 2%, 34%);
+    color: hsl(0, 0%, 0%);
+    background: hsl(61, 97%, 59%);
     font-weight: 500;
     font-size: 1rem;
     padding: .5rem;
@@ -127,4 +130,35 @@
     font-size: 1.8rem;
     font-weight: 600;
     width: 100%;
+}
+
+.meal-item{
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.79);
+}
+
+.meal-name{
+    padding: 1rem .5rem;
+}
+
+.meal-name h3{
+    font-size: clamp(1rem, 2vw, 1.4rem);
+    text-align: center;
+}
+
+@media screen and (min-width:768px){
+    #meal{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 2rem;
+    }
+}
+
+@media screen and (min-width:992px){
+    #meal{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap:1.2rem;
+    }
 }
