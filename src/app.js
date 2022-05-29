@@ -2,12 +2,20 @@ const searchBtn = document.getElementById("search-btn");
 const mealList = document.getElementById("meal");
 const mealDetailsContent= document.querySelector(".meal-details-content");
 const recipeCloseBtn = document.getElementById("recipe-close-btn");
+const searchControl = document.querySelector(".search-control");
 
 searchBtn.addEventListener('click',getMealList);
 mealList.addEventListener('click',getMealRecipe);
 recipeCloseBtn.addEventListener('click', ()=>{
     mealDetailsContent.parentElement.classList.remove('showRecipe');
 });
+
+searchControl.addEventListener("keyup",function(e){
+    if(e.keyCode == 13){
+        e.preventDefault();
+        searchBtn.click();
+    }
+})
 
 function getMealList(){
     let searchInputText = document.getElementById("search-input").value.trim(); // delete spacing at the beginning and at the end to string value
@@ -63,7 +71,7 @@ function mealRecipeModal(meal){
     </div>
 
     <div class="recipe-meal-img">
-        <img src="${meal.strMealThumb}" alt="food">
+        <img class="rounded-circle my-0 mx-auto d-block" src="${meal.strMealThumb}" width="100px" height="100px" alt="food">
     </div>
     <div class="recipe-link">
         <a href="${meal.strYoutube}" target="_blank">Watch video</a>
