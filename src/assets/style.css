@@ -143,6 +143,15 @@ input#search-input:focus{
     text-align: center;
 }
 
+.upBtn{
+    font-size: 50px;
+    cursor: pointer;
+    position: fixed;
+    right: 40px;
+    bottom: 30px;
+    display: none;
+}
+
 @media screen and (min-width:768px){
     #meal{
         display: grid;

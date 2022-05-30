@@ -3,6 +3,7 @@ const mealList = document.getElementById("meal");
 const mealDetailsContent= document.querySelector(".meal-details-content");
 const recipeCloseBtn = document.getElementById("recipe-close-btn");
 const searchControl = document.querySelector(".search-control");
+const upBtn = document.querySelector(".upBtn");
 
 searchBtn.addEventListener('click',getMealList);
 mealList.addEventListener('click',getMealRecipe);
@@ -80,4 +81,21 @@ function mealRecipeModal(meal){
 
     mealDetailsContent.innerHTML = html;
     mealDetailsContent.parentElement.classList.add('showRecipe');
+}
+
+window.onscroll = function(e){
+    if(document.documentElement.scrollTop > 650){
+        upBtn.style.display= "block"
+    }else{
+        upBtn.style.display="none"
+    }
+}
+
+onscroll();
+
+upBtn.onclick = () =>{
+    window.scrollTo({
+        top:0,
+        behavior: 'smooth'
+    })
 }
